@@ -20,7 +20,7 @@ COPY ./src/comfyui/comfyui.png /opt/ComfyUI/comfyui.png
 RUN chown 1000:1000 /opt/ComfyUI/comfyui.png
 
 
-RUN apt-get update && apt-get install -y gimp nomacs && cp /usr/share/applications/gimp.desktop $HOME/Desktop/ && chmod +x $HOME/Desktop/gimp.desktop
+RUN apt-get update && apt-get install -y gimp nomacs vlc && cp /usr/share/applications/gimp.desktop $HOME/Desktop/ && chmod +x $HOME/Desktop/gimp.desktop
 
 ######### End Customizations ###########
 
@@ -30,5 +30,6 @@ RUN $STARTUPDIR/set_user_permission.sh $HOME
 ENV HOME=/home/kasm-user
 WORKDIR $HOME
 RUN mkdir -p $HOME && chown -R 1000:0 $HOME
+
 
 USER 1000
