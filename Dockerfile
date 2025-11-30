@@ -1,4 +1,4 @@
-FROM kasmweb/desktop:1.18.0-rolling-daily
+FROM kasmweb/ubuntu-noble-desktop:1.18.0-rolling-daily
 USER root
 
 ENV HOME=/home/kasm-default-profile
@@ -20,7 +20,7 @@ COPY ./src/comfyui/comfyui.png /opt/ComfyUI/comfyui.png
 RUN chown 1000:1000 /opt/ComfyUI/comfyui.png
 
 
-RUN apt-get update && apt-get install -y gimp nomacs vlc && cp /usr/share/applications/gimp.desktop $HOME/Desktop/ && chmod +x $HOME/Desktop/gimp.desktop
+RUN apt-get update && apt-get install -y nomacs
 
 ######### End Customizations ###########
 
@@ -33,3 +33,4 @@ RUN mkdir -p $HOME && chown -R 1000:0 $HOME
 
 
 USER 1000
+
