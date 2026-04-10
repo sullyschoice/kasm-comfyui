@@ -13,5 +13,5 @@ Access via your browser: `https://<your ip>:6901` username: `kasm` , password: `
 
 ## Build
 ```bash
-sudo docker build -t comfyui:latest -f Dockerfile .
+sudo docker build -t comfyui:latest -f Dockerfile . 
 ```
