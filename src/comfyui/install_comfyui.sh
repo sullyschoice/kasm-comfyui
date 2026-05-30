@@ -12,7 +12,7 @@ cd ComfyUI
 python3 -m venv venv
 source venv/bin/activate
 pip uninstall torch
-pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu129
+pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu130
 
 pip3 install -r requirements.txt
 chown -R 1000:1000 /opt/ComfyUI
